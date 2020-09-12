@@ -118,33 +118,28 @@ if ('serviceWorker' in navigator) {
 
 const input = document.querySelector('.input_text');
 const main = document.querySelector('#name');
-const temp = document.querySelector('.temp');
 const desc = document.querySelector('.desc');
-const clouds = document.querySelector('.clouds');
 const button= document.querySelector('.submit');
 const iconElement2 = document.querySelector(".weather-icon2");
 const tempElement2 = document.querySelector(".temperature-value2 p");
-const descElement2 = document.querySelector(".temperature-description2 p");
 
 button.addEventListener('click', function(name){
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=d7914b799cc8bdf469b4c6b14888a81a')
 .then(response => response.json())
 .then(data => {
-  const tempValue = data['main']['temp'];
   const nameValue = data['name'];
   const descValue = data['weather'][0]['description'];
     weather.iconId = data.weather[0].icon;
-     weather.temperature.value = Math.floor(data.main.temp - KELVIN);
-     weather.description = data.weather[0].description;
+    weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+
   
   iconElement2.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
   tempElement2.innerHTML = `${weather.temperature.value}°<span>C</span>`;
-  descElement2.innerHTML = weather.description;
   main.innerHTML = nameValue;
   desc.innerHTML = "Description - "+descValue;
   input.value ="";
 
-  window.localStorage.setItem(JASON.stringify(data));
+  window.localStorage.setItem(JSON.stringify(data));
 
 })
 
