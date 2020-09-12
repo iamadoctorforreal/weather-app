@@ -1,0 +1,14 @@
+{
+    "name": "Smash It Weather App",
+    "short_name": "SIWA",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "The Weather App By Smash It.",
+    "icons": [{
+      "src": "/wap/img/drops.svg",
+      "sizes": "48x48",
+      "type": "image/png"
+    }]
+   
+}

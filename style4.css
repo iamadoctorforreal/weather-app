@@ -1,0 +1,384 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/wap/fonts/Poppins-Bold.ttf);
+  }
+
+body {
+	font-family: Poppins, sans-serif;
+	background-image: url("./img/landscape.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+button {
+	font-family: Poppins, sans-serif;
+}
+
+header {
+	display: flex;
+	width: 100%;
+	height: 10vh;
+	margin: auto;
+    align-items: center;
+    background-color: rgba(67, 199, 186, 0.5);
+}
+
+footer {
+    display: flex;
+	width: 100%;
+	height: 10vh;
+	margin: auto;
+    align-items: center;
+    background-color: rgba(67, 199, 186, 0.5);
+}
+
+.logo-container,
+.nav-links,
+.nil {
+	display: flex;
+}
+
+.logo-container {
+	flex: 1;
+}
+.logo {
+    margin: 5px;
+    font-size: 20px;
+    color: snow;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+nav {
+	flex: 2;
+}
+.nav-links {
+	justify-content: space-around;
+    list-style: none;
+    
+}
+.nav-link {
+	color: #5f5f79;
+	font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-links a{
+    color: snow;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nil {
+	flex: 1;
+}
+
+.presentation {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	min-height: 80vh;
+    align-items: center;
+   /* background: linear-gradient(rgb(47,150,163,.4), rgb(48,62,143,.4));*/
+        background-color: rgba(67, 100, 186, 0.3);
+    color: snow;
+}
+.introduction {
+    flex: 1;
+   /* background: linear-gradient(rgb(47,150,163,.5), rgb(48,62,143,.5));*/
+    color: snow;
+}
+.intro-text h1 {
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #cfe9f3, snow);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*.app-title {
+    font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #61c5ec, #f4f4f7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}*/
+
+.intro-text p {
+	margin-top: 5px;
+	font-size: 22px;
+    color: #585772;
+    justify-content: center;
+}
+
+.weather-icon img {
+    justify-content: center;
+    width: 50%;
+}
+
+.weather-container {
+    justify-content: center;
+    width: 70%;
+    height: 60vh;
+}
+
+
+/*.weather-icon {
+    background-color: chocolate;
+}
+
+.temperature-value {
+    background-color: blue;
+}*/
+
+.temperature-description {
+   /* background-color: crimson;*/
+    text-transform: capitalize;
+}
+
+/*.location {
+    background-color: cyan;
+}*/
+
+.cta {
+	padding: 50px 0px 0px 0px;
+}
+.cta-select {
+	border: 2px solid #c36cbb;
+	background: transparent;
+	color: #c36cbb;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+}
+.cta-add {
+	background: #c36cbb;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	color: snow;
+	margin: 30px 0px 0px 30px;
+}
+.submit {
+    background: rgb(67, 100, 186,.8);
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+	color: snow;
+	margin: 30px 0px 0px 30px;
+}
+
+input[type=text], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.cover {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+    height: 60vh;
+    align-items: center;
+   /* background: linear-gradient(rgb(47,150,163,.5), rgb(48,62,143,.5));*/
+    color: snow;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+	display: flex;
+	justify-content: center;
+    height: 70vh;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+   /* background: linear-gradient(rgb(47,150,163,.5), rgb(48,62,143,.5));*/
+    color: snow;
+    flex-direction: column;
+}
+
+.temperature-degree, .temperature-description  {
+    align-items: center;
+  /*  background: linear-gradient(rgb(47,150,163,.5), rgb(48,62,143,.5));
+   */ color:snow;
+}
+
+.location, .temperature, .weather-icon, .temperature-description, .temperature-value {
+    /*width: 50%;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    margin-top: 10px;
+	font-size: 22px;
+    color:snow;
+    justify-content: center;
+}
+ 
+.temperature {
+    flex-direction: column;
+}
+
+.degree-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.degree-section span {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.degree-section h2 {
+    font-size: 40px;
+}
+
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: snow;
+    margin: 5px;
+    margin-left: 100%;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+	
+	.presentation {
+		flex-direction: column;
+	}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	.cover img {
+		height: 80%;
+	}
+	
+}
+
+
+@media screen and (max-width: 905px) {
+    .logo {
+        margin: 5px;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position:absolute;
+        right: 0px;
+        height: 90vh;
+        top:10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(67, 199, 186, 0.5);
+        width: 50%;
+        transform:translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .burger{
+        display: block;
+    }
+    
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        margin: 5px;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:646px) {
+    .logo {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:595px) {
+    .logo {
+        margin: 2px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:518px) {
+    .logo {
+        margin: 0px;
+        font-size: 10px;
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (max-width:414px) {
+    .logo {
+        margin: 0px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:280px) {
+    .logo {
+        margin: 0px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}
