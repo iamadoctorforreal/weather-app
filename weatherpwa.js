@@ -122,8 +122,9 @@ const temp = document.querySelector('.temp');
 const desc = document.querySelector('.desc');
 const clouds = document.querySelector('.clouds');
 const button= document.querySelector('.submit');
- const iconElement2 = document.querySelector(".weather-icon2");
+const iconElement2 = document.querySelector(".weather-icon2");
 const tempElement2 = document.querySelector(".temperature-value2 p");
+const descElement2 = document.querySelector(".temperature-description2 p");
 
 button.addEventListener('click', function(name){
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=d7914b799cc8bdf469b4c6b14888a81a')
@@ -134,16 +135,21 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=d
   const descValue = data['weather'][0]['description'];
     weather.iconId = data.weather[0].icon;
      weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+     weather.description = data.weather[0].description;
   
   iconElement2.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
   tempElement2.innerHTML = `${weather.temperature.value}°<span>C</span>`;
-  descElement.innerHTML = weather.description;
+  descElement2.innerHTML = weather.description;
   main.innerHTML = nameValue;
-  desc.innerHTML = "Desc - "+descValue;
-  temp.innerHTML = "Temp - "+tempValue;
+  desc.innerHTML = "Description - "+descValue;
   input.value ="";
+
+  window.localStorage.setItem(JASON.stringify(data));
 
 })
 
 .catch(err => alert("Thanks for the search!"));
+
+
 })
+

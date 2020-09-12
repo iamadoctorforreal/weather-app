@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: Poppins;
-    src: url(/wap/fonts/Poppins-Bold.ttf);
+    src: url(./fonts/Poppins-Bold.ttf);
   }
 
 body {
@@ -138,7 +138,7 @@ nav {
     background-color: blue;
 }*/
 
-.temperature-description {
+.temperature-description, .temperature-description2 {
    /* background-color: crimson;*/
     text-transform: capitalize;
 }
@@ -214,7 +214,7 @@ input[type=text], select {
     flex-direction: column;
 }
 
-.temperature-degree, .temperature-description  {
+.temperature-degree, .temperature-description, .temperature-description2 {
     align-items: center;
   /*  background: linear-gradient(rgb(47,150,163,.5), rgb(48,62,143,.5));
    */ color:snow;
@@ -232,6 +232,18 @@ input[type=text], select {
     justify-content: center;
 }
  
+.desc {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    margin-top: 10px;
+	font-size: 22px;
+    color:snow;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
 .temperature {
     flex-direction: column;
 }

@@ -29,6 +29,18 @@ const urlsToCache = [
 ];
 
 let icons = [];
+const weather = {};
+function getWeather(latitude, longitude){
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    
+    fetch(api)
+        .then(function(response){
+            let data = response.json();
+            return data;
+        })
+        .then(function(data){
+weather.iconId = data.weather[0].icon;})
+        
 for(let i=0; i<iconId.length; i++) {
   icons.push(`icons/${weather.iconId}.png`);
 }
@@ -45,7 +57,7 @@ self.addEventListener('install', installer => {
     };
     installer.waitUntil(done());
 });
-
+}
 self.addEventListener('fetch', fetchEvent => {
     const url = fetchEvent.request.url;
     console.log(`Fetching: ${url}`);
